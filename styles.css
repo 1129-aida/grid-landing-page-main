@@ -434,4 +434,54 @@ svg * {
   }
 
   
+  @media (max-width: 800px) {
+    body{ 
+      grid-template-columns: 1fr;
+      grid-template-areas: 
+        "header"
+        "tit"
+        "statistic"
+        "footer"     
+      ;
+    }
+    .adc{
+      font-size: 15px;
+    }
+    .hero h2 {
+      align-self: self-end;
+      justify-self: self-start;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 40px;
+   }
+    footer {
+    grid-template-columns: auto auto;
+  }
+  }
   
+
+  @media(max-width: 600px){
+    footer {
+    grid-template-columns: auto ;
+    justify-content: center;
+  }
+  } 
+
+  @media(max-width: 400px){
+    .statis {
+    grid-template-columns: auto;
+   }
+   div section {
+    height: 268px;
+   }
+   .adc {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 71px;
+    height: 267px;
+    text-align: center;
+    padding: 25px;
+    font-size: 27px;
+   }
+  }
