@@ -269,25 +269,94 @@ svg * {
       padding: 20px 30px; 
      background-color: var(--background-color);
      position: relative;
+     z-index: 10;
     }
     
       a {
       text-decoration: none;
       color: var(--text-color);
+
     }
-   h1 {
+
+   a:hover {
+    text-decoration: underline;
+   }
+
+   summary {
+    list-style: none;
+   }
+
+   nav {
+    width: 100px;
+    text-align: end;
+   }
+
+   nav:hover {
+    cursor: pointer;
+   }
+
+
+
+   .round {
+    width: 10px;
+    height: 10px;
+    border: 7px solid var(--text-color);
+    border-radius: 50%;
+    align-self: center;
+   }
+
+
+    h1 {
     margin: 0;
     display: inline-block;
     font-size: 14px;
     font-weight: 400;
+    align-self: center;
+   }
+
+
+   .flr {
+    display: grid;
+    grid-template-columns: 5px 1fr;
+    column-gap: 20px;
    }
 
    
    .adc {
     position: fixed;
-    height: 100%;
+    bottom: 0;
+    right: 0;
+    left: 70.9%;
+    top: 71px;
     background-color: var(--background-color);
+    text-align: end;
+    padding: 50px;
+    font-size: 30px;
+    font-weight: 500;
    }
+
+
+   body:has(details[open])::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background-color: var(--overlay-color);
+   }
+
+   .close {
+    display: none;
+   }
+
+   details[open] .burger {
+    display: none;
+   }
+
+   details[open] .close {
+    display: inline;
+   }
+   
+
+
 
 
     .hero {
@@ -328,6 +397,11 @@ svg * {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr auto;
+  }
+
+  div section:hover {
+    background-color: var(--targeting-color);
+    cursor: pointer;
   }
 
   .addit {
